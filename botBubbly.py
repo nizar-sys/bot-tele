@@ -1,7 +1,6 @@
 import telebot
-
-bot = telebot.TeleBot(
-    "1687764133:AAGPkKf9QjiEoNlRIRmwwTt-JDohsUIa6BY", parse_mode=None)
+token = "TOKEN DARI BOT"
+bot = telebot.TeleBot(token, parse_mode=None)
 
 
 @bot.message_handler(commands=['start', 'help'])
@@ -24,7 +23,7 @@ def echo_all(message):
         bot.send_message(chat_id, manfaat)
     elif(message.text == '/Order'):
         chat_id = message.chat.id
-        url = 'https://api.whatsapp.com/send?phone=62895384273590&text=assalamualaikum%20saya%20mau%20beli%20masker.%20Apa%20masih%20tersedia?'
+        url = 'https://api.whatsapp.com/send?phone=noHp&text=assalamualaikum%20saya%20mau%20beli%20masker.%20Apa%20masih%20tersedia?'
         bot.send_message(
             chat_id, 'klik url ini dan Anda akan kami arahkan ke Admin :) ' + url)
 
